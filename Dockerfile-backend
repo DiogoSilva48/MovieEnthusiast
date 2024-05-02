@@ -1,0 +1,20 @@
+# Use Node.js version 20 LTS as the base image for the backend
+FROM node:20 AS backend-builder
+
+WORKDIR /backend
+
+# Copy package.json and package-lock.json to the working directory
+COPY backend/package.json backend/package-lock.json ./
+
+# Install dependencies
+RUN npm install npm@latest -g
+RUN npm install
+
+# Copy the rest of the backend files to the working directory
+COPY backend/ .
+
+# Expose port 3000 (optional)
+EXPOSE 3000
+
+# Command to run the backend
+CMD ["npm", "start"]
