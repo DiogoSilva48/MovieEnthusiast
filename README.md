@@ -30,6 +30,8 @@ I've also included two ways of running the app, one is through the "traditional 
 
     `git clone https://github.com/DiogoSilva48/MovieEnthusiast`
 
+    `cd MovieEnthusiast`
+
 2.  Backend Setup:
     `cd backend` or `cd backend-justapi`
 
@@ -74,6 +76,8 @@ I've also included two ways of running the app, one is through the "traditional 
 1. Clone the Repository
 
    `git clone https://github.com/DiogoSilva48/MovieEnthusiast`
+
+   `cd MovieEnthusiast`
 
 2. Backend Setup:
 
