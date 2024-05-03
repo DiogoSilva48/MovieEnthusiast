@@ -2,7 +2,7 @@
 
 ## Introduction
 
-MovieEnthusiast is a web application that allows users to explore and discover movies from three different ways:
+MovieEnthusiast is a web application that allows users to explore and discover movies in three different ways:
 
 1.  Infinite scroll: Users can scroll through a list of movies endlessly, loading more as they reach the end of the page.
 2.  Top 10 movies by revenue: Users can view a curated list of the top 10 highest-grossing movies.
@@ -18,9 +18,9 @@ MovieEnthusiast is a web application that allows users to explore and discover m
 
 ## Little Explanation
 
-I have decided to include two different backends, one which is only using the TMDb API directly in Node.js, because this was the first I did, and allows to use the whole list of movies provided by The Movie Database (this is inside the 'backend-justapi' folder), and the other backend where I used a MongoDB database and I just use the TMDb API to fetch the movies and save them to the database, this solution is better because we only need to use the TMDb API once (or more if we want to the update) (this is inside the 'backend' folder). The later has a limited amount of movies, just because it would be a very tedious process to download all of them and this number is already enough to demonstrate all functionalities.
+I have decided to include two different backends, one which is only using the TMDb API directly in Node.js, because this was the first I did, and allows to use the whole list of movies provided by The Movie Database (this is inside the 'backend-justapi' folder), and the other backend where I used a MongoDB database and I just use the TMDb API to fetch the movies and save them to the database, this solution is better because we only need to use the TMDb API once (or more if we want do an update) (this is inside the 'backend' folder). The latter has a limited amount of movies, just because it would be a very tedious process to download all of them and this number is already enough to demonstrate all functionalities.
 
-I've also included two ways of running the app, one is through the "traditional way" which is by having Node.js and NPM installed locally on the machine and having a MongoDB already running or using one in MongoDB Atlas. The other way is by using Docker, which creates containers for React, Node.js and MongoDB, which makes it very easy, this one I only made available for the backend with Node.js, which is the one it made sense for.
+I've also included two ways of running the app, one is through the "traditional way" which is by having Node.js and NPM installed locally on the machine and having a MongoDB already running or using one in MongoDB Atlas. The other way is by using Docker, which creates containers for React, Node.js, and MongoDB, which makes it very easy, this one I only made available for the backend with Node.js, which is the one it made sense for.
 
 ## Setup Instructions
 
@@ -91,16 +91,16 @@ I've also included two ways of running the app, one is through the "traditional 
 
 ### Data "Pre-fetching"
 
-**This step is only required for the Backend with MongoDB or Docker Setup**. Since our database doesn't have any data yet, before we access our web application, we need to an additional step to fetch movie details from the TMDb API and save them to the database.
+**This step is only required for the Backend with MongoDB or Docker Setup**. Since our database doesn't have any data yet, before we access our web application, we need to do an additional step to fetch movie details from the TMDb API and save them to the database.
 
 You need to access the following endpoint through the browser or through Postman using GET:
 
 `http://localhost:3000/api/fetchMovieDetails`
 
-This is a process which takes a considerable amount of time, which is why I added an **alternative**, which doesn't require the TMDb API, which is including a pre-fetched collection of movies, which are added very quickly by using the following endpoint through the browser or through Postman using GET:
+This is a process that takes a considerable amount of time, which is why I added an **alternative**, which doesn't require the TMDb API, which includes a pre-fetched collection of movies, which are added very quickly by using the following endpoint through the browser or through Postman using GET:
 
 `http://localhost:3000/api/import`
 
-### Acessing the web application
+### Accessing the web application
 
 With the other steps done, all you need to do is access the web application through the browser by going to `http://localhost:5173/`.
