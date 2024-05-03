@@ -82,7 +82,7 @@ I've also included two ways of running the app, one is through the "traditional 
 2. Backend Setup:
 
    - Modify the `docker-compose.yml` file:
-     - Add your TMDb API key to the `API_KEY` environment variable under both `frontend` and `backend` services.
+     - Add your TMDb API key to the `API_KEY` environment variable under the `backend` service.
    - Run the following commands to build and run Docker containers:
 
      `docker-compose build frontend backend`
